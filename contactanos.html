@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SM Studio PMU - Contáctanos</title>
+  <link rel="stylesheet" href="contactanos.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqMLEHG8iSLqMRm7TM06od_G-UWkd2xbM&callback=console.debug&libraries=maps,marker&v=beta"></script>
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <section class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contáctanos</h2>
+          <p class="section-subtitle">Estamos aquí para resolver todas tus dudas</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Info Cards -->
+          <div class="contact-info-cards">
+            <div class="info-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <h3>Visítanos</h3>
+              <p>Carrera 9 1-22</p>
+              <p>Pereira, Risaralda, Colombia</p>
+            </div>
+
+            <div class="info-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-clock"></i>
+              </div>
+              <h3>Horario</h3>
+              <p>Lun - Vie: 9:00 AM - 6:00 PM</p>
+              <p>Sáb: 9:00 AM - 6:00 PM</p>
+            </div>
+
+            <div class="info-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <h3>Llámanos</h3>
+              <p>+57 313 3356779</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <form id="contactForm" action="https://formspree.io/f/xbldkjpp" method="POST" class="contact-form">
+              <div class="form-floating mb-4">
+                <input type="text" name="nombre" class="form-control" id="nombreInput" placeholder="Tu nombre" required>
+                <label for="nombreInput">Nombre</label>
+              </div>
+              
+              <div class="form-floating mb-4">
+                <input type="email" name="email" class="form-control" id="emailInput" placeholder="tu@email.com" required>
+                <label for="emailInput">Correo electrónico</label>
+              </div>
+
+              <div class="form-floating mb-4">
+                <textarea name="mensaje" class="form-control" id="mensajeInput" placeholder="Tu mensaje" style="height: 150px" required></textarea>
+                <label for="mensajeInput">Mensaje</label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span>Enviar mensaje</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="map-section">
+          <div class="map-container">
+            <gmp-map center="4.8104188,-75.6796428" zoom="18" map-id="DEMO_MAP_ID">
+              <gmp-advanced-marker position="4.8104188,-75.6796428" title="SM Studio PMU"></gmp-advanced-marker>
+            </gmp-map>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script src="include.js"></script>
+  <script src="animaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* Estilos para la sección Quiénes Somos */
+.about-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #d4af37, #ffd700);
+  }
+  
+  .section-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  /* Grid del equipo */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px;
+  }
+  
+  /* Tarjetas de miembro del equipo */
+  .team-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team-image-wrapper {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+  }
+  
+  .team-image-wrapper img {
+    width: 100%;
+    height: 196%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-card:hover .team-image-wrapper img {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay de redes sociales */
+  .social-overlay {
+    position: absolute;
+    bottom: -59px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: bottom 0.3s ease;
+  }
+  
+  .team-card:hover .social-overlay {
+    bottom: 0;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background: #d4af37;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  /* Contenido del equipo */
+  .team-content {
+    padding: 30px;
+  }
+  
+  .team-content h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .position {
+    color: #d4af37;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .expertise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .expertise-badge {
+    background: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+  }
+  
+  .bio {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+  }
+  
+  .achievement-item i {
+    color: #d4af37;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 40px 0;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .team-card {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  
+    .team-image-wrapper {
+      height: 300px;
+    }
+  }

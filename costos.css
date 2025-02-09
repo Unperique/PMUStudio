@@ -1,0 +1,159 @@
+.costos {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fff5e6, #fff);
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #ffc857);
+  }
+  
+  .subtitle {
+    color: #666;
+    font-size: 1.2rem;
+  }
+  
+  .categoria-servicios {
+    margin-bottom: 60px;
+  }
+  
+  .categoria-servicios h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .servicios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .servicio-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #d4af37, #ffc857);
+  }
+  
+  .servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servicio-card h4 {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .precio {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .descripcion {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .duracion, .retoque, .recomendacion {
+    color: #888;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .nota-duracion {
+    text-align: center;
+    padding: 20px;
+    margin: 40px 0;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+  }
+  
+  .nota-duracion p {
+    color: #666;
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .ubicacion-container {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .ubicacion-container h4 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .ubicacion-container p {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .ubicacion-container i {
+    color: #d4af37;
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .costos {
+      padding: 60px 0;
+    }
+  
+    .section-header h2 {
+      font-size: 2rem;
+    }
+  
+    .servicio-card {
+      padding: 20px;
+    }
+  
+    .precio {
+      font-size: 1.8rem;
+    }
+  }

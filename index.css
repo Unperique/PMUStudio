@@ -1,0 +1,279 @@
+/* Variables globales */
+:root {
+    --primary-color: #d4af37;
+    --secondary-color: #2d2d2d;
+    --accent-color: #ffd700;
+  }
+  
+  /* Reset y estilos base */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('images/hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  
+  /* Títulos de sección */
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  }
+  
+  /* Sección de características */
+  .features {
+    padding: 5rem 0;
+    background: #fff;
+  }
+  
+  .feature-item {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  /* Sección de servicios */
+  .services-preview {
+    padding: 5rem 0;
+    background: #fff;
+  }
+  
+  .service-card {
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Sección Sobre Nosotros */
+  .about-section {
+    padding: 5rem 0;
+    background: #f9f9f9;
+  }
+  
+  .about-img {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Sección de estadísticas */
+  .stats {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Sección de testimonios */
+  .testimonials {
+    padding: 5rem 0;
+    background: #fff;
+  }
+  
+  .testimonial-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+  }
+  
+  /* Galería */
+  .gallery {
+    padding: 5rem 0;
+    background: #f9f9f9;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .gallery-item img {
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Sección CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Botón flotante de citas */
+  .floating-appointment {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Botones personalizados */
+  .custom-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border: none;
+    color: #000;
+  }
+  
+  .btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+  }
+  
+  .btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  /* Animaciones */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .service-card {
+      margin-bottom: 1rem;
+    }
+  
+    .stat-item {
+      margin-bottom: 2rem;
+    }
+  
+    .testimonial-card {
+      margin-bottom: 1.5rem;
+    }
+  
+    .custom-btn {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Efectos de hover adicionales */
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  }
+  
+  .service-card:hover .service-icon {
+    transform: scale(1.1);
+    color: var(--accent-color);
+  }
+  
+  .feature-item:hover .feature-icon {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }

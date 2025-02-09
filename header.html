@@ -1,0 +1,282 @@
+<header class="header-elegant">
+  <nav class="nav-container">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <img src="imagenes/logo2.PNG" alt="SM Studio PMU Logo" class="logo-image light-logo">
+        <img src="imagenes/logo.PNG" alt="SM Studio PMU Logo" class="logo-image dark-logo">
+        <div class="logo-glow"></div>
+      </a>
+    </div>
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">
+          <span class="nav-text">Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="quienes-somos.html" class="nav-link">
+          <span class="nav-text">¿Quiénes Somos?</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="servicios.html" class="nav-link">
+          <span class="nav-text">Servicios</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="contactanos.html" class="nav-link contact-btn">
+          <span class="btn-text">Contáctanos</span>
+          <div class="btn-shine"></div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <style>
+    .header-elegant {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 95%;
+      max-width: 1400px;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 15px 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .header-elegant:hover {
+      background: rgba(26, 26, 26, 0.95);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo-link {
+      position: relative;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-image {
+      height: 45px;
+      transition: all 0.3s ease;
+    }
+
+    /* Logo states */
+    .light-logo {
+      opacity: 1;
+      position: relative;
+    }
+
+    .dark-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .header-elegant:hover .light-logo {
+      opacity: 0;
+    }
+
+    .header-elegant:hover .dark-logo {
+      opacity: 1;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .logo-link:hover .logo-glow {
+      width: 100px;
+      height: 100px;
+      opacity: 1;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    .header-elegant:hover .nav-link {
+      color: #fff;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #d4af37, transparent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .contact-btn {
+      position: relative;
+      background: linear-gradient(45deg, #d4af37, #ffd700);
+      padding: 10px 25px;
+      border-radius: 25px;
+      color: #1a1a1a !important;
+      font-weight: 600;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .btn-shine {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(45deg);
+      transition: 0.5s;
+    }
+
+    .contact-btn:hover .btn-shine {
+      transform: rotate(45deg) translate(50%, 50%);
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #1a1a1a;
+      transition: all 0.3s ease;
+    }
+
+    .header-elegant:hover .hamburger span {
+      background-color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .header-elegant {
+        top: 10px;
+        padding: 10px 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: rgba(26, 26, 26, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 1.5rem;
+        border-radius: 20px;
+        margin-top: 10px;
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-link {
+        color: #fff;
+        font-size: 1.2rem;
+      }
+
+      .contact-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</header>
